@@ -7,7 +7,10 @@
     <title>Professors Template</title>
 </head>
 <body>
-    <h1>Informacio dels Professors de DAW2</h1>
+    {% extends 'index.html' %}
+    {% block content %}
+    <h2>Benvinguts a la pàgina Teachers de la app Practica16</h2>
+    <p>Dades Professors:</p>
     <ul>
         {% for prof in profs %}
         <li>Nom: {{prof.name}}</li>
@@ -16,5 +19,6 @@
         </br>
         {% endfor %}
     </ul>
+    {% endblock %}
 </body>
 </html>

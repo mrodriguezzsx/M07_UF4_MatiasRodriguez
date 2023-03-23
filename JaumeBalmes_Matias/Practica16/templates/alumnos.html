@@ -7,7 +7,10 @@
     <title>Students Template</title>
 </head>
 <body>
-    <h1>Informacio dels Students de DAW2</h1>
+    {% extends 'index.html' %}
+    {% block content %}
+    <h2>Benvinguts a la pàgina Students de la app Practica16</h2>
+    <p>Dades Alumnes:</p>
     <ul>
         {% for alumn in alumns %}
         <li>Nom: {{alumn.name}}</li>
@@ -16,5 +19,6 @@
         </br>
         {% endfor %}
     </ul>
+    {% endblock %}
 </body>
 </html>

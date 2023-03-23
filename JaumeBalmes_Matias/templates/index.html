@@ -8,18 +8,14 @@
     <title>Index Template</title>
 </head>
 <body>
+    {% include "header/header.html" %}
     <h1>Primer Projecte - app Practica16</h1>
     <p>Benvinguts a la primera app Practica16</p>
 
-    <p>Dades Professor:</p>
-    <div>
-        <label>Nom: </label> {{name}}
-    </div>
-    <div>
-        <label>Cognom: </label> {{surname}}
-    </div>
-    <div>
-        <label>Edad: </label> {{edad}}
-    </div>
+    <!-- En aquest block s'hi renderitzaran tots les altres pàgines web -->
+    {% block content %}
+
+    {% endblock %}
+
 </body>
 </html>
