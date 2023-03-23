@@ -6,9 +6,71 @@ from django.template import Context, loader
 def index_one(request):
     return HttpResponse('uhuhh World')
 
+professors = [
+    {
+        'id':'1',
+        'name':'Matias',
+        'surname':'Rodriguez',
+        'edad':'20'
+    },
+    {
+        'id':'2',
+        'name':'Roger',
+        'surname':'Sobrino',
+        'edad':'20'
+    },
+    {
+        'id':'3',
+        'name':'Raul',
+        'surname':'Rufo',
+        'edad':'20'
+    }
+]
+
 def teachers(request):
-    professor = {'name':'Matias','surname':'Rodriguez','edad':'20'}
-    template = loader.get_template('index.html')
-    dades = template.render({'name':professor['name'], 'surname':professor['surname'], 'edad':professor['edad']})
-    return HttpResponse(dades)
-    # return render(request, 'index.html', {'name':professor['name'], 'surname':professor['surname'], 'edad':professor['edad']})
+    context = {'profs': professors}
+    return render(request, 'professors.html', context)
+
+alumnos = [
+    {
+        'id':'1',
+        'name':'Matias',
+        'surname':'Rodriguez',
+        'edad':'20'
+    },
+    {
+        'id':'2',
+        'name':'Roger',
+        'surname':'Sobrino',
+        'edad':'20'
+    },
+    {
+        'id':'3',
+        'name':'Raul',
+        'surname':'Rufo',
+        'edad':'20'
+    },
+    {
+        'id':'4',
+        'name':'Patito',
+        'surname':'Milet',
+        'edad':'20'
+    },
+    {
+        'id':'5',
+        'name':'Andres',
+        'surname':'Carles',
+        'edad':'20'
+    },
+    {
+        'id':'6',
+        'name':'Miquel',
+        'surname':'Montoro',
+        'edad':'20'
+    }
+]
+
+def students(request):
+    context = {'alumns': alumnos}
+    return render(request, 'alumnos.html', context)
+
