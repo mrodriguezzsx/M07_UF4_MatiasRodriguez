@@ -1,23 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" 
-    content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Index Template</title>
-</head>
-<body>
-    {% include "header/header.html" %}
-    <div style="margin: 15px 30px">
-        <h1>Primer Projecte - app Practica16</h1>
-        <p>Benvinguts a la primera app Practica16</p>
+{% include "header/header.html" %}
+<a href="{% url 'user_form' %}">Afegir Usuaris</a>
+<div style="margin: 15px 30px">
+    <h1>Primer Projecte</h1>
+    <p>Benvinguts a la primera app</p>
 
-        <!-- En aquest block s'hi renderitzaran tots les altres pàgines web -->
-        {% block content %}
+    <!-- En aquest block s'hi renderitzaran tots les altres pàgines web -->
+    {% block content %}
 
-        {% endblock %}
-    </div>
-
-</body>
-</html>
+    {% endblock %}
+</div>

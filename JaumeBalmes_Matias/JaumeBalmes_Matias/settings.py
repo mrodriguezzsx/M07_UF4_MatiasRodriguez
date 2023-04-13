@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Practica16.apps.Practica16Config',
+    'practica18.apps.Practica18Config',
 ]
 
 MIDDLEWARE = [
