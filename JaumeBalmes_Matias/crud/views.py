@@ -77,6 +77,7 @@ def students(request):
     return render(request, 'alumnos.html', context)
 
 #Funciones del CRUD
+#Create
 def user_form(request):
     form = PersonForm()
     if request.method == 'POST':
@@ -85,6 +86,20 @@ def user_form(request):
             form.save()
             return redirect('index_one')
 
+    context = {'form':form}
+    return render(request, 'form.html', context)
+
+#Update
+def user_update(request, pk):
+    person = Person.objectes.get(id = pk)
+    form = PersonForm(instance=person)
+
+    if request.method == 'POST':
+        form = PersonForm(request.POST, instance=person)
+        if form.is_valid():
+            form.save()
+            return redirect('index_one')
+        
     context = {'form':form}
     return render(request, 'form.html', context)
 
