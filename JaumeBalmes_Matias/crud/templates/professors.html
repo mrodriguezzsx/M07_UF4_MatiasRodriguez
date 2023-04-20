@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+    {% block content %}
+    <h2 style="margin-top: 10px;">Benvinguts a la pàgina Teachers</h2>
+    <p>Dades Professors:</p>
+    <ul>
+        {% for prof in profs %}
+        <div style="border: solid black 2px; margin: 10px 0;padding: 5px; width: 15%;">
+            <li style="list-style: none;">Nom: {{prof.name}}</li>
+            <li style="list-style: none;">Cognom: {{prof.surname}}</li>
+            <li style="list-style: none;">Edad: {{prof.edad}}</li>
+            </br>
+        </div>
+        {% endfor %}
+    </ul>
+    {% endblock %}
