@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<h1>Formulari Prova</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <p>Segur que vols eliminar a "{{ object.first_Name }}" ?</p>
+    <button><a href="{% url 'index_one' %}">TORNAR</a></button>
+    <input type="submit" value="CONFIRMAR" />
+</form>
+
+{% endblock %}

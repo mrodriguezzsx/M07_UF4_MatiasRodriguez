@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Practica16.apps.Practica16Config',
     'practica18.apps.Practica18Config',
+    'crud.apps.CrudConfig'
 ]
 
 MIDDLEWARE = [

@@ -1,11 +1,25 @@
-{% include "header/header.html" %}
-<a href="{% url 'user_form' %}">Afegir Usuaris</a>
-<div style="margin: 15px 30px">
-    <h1>Primer Projecte</h1>
-    <p>Benvinguts a la primera app</p>
+<!DOCTYPE html>
+<html lang="es">
 
-    <!-- En aquest block s'hi renderitzaran tots les altres pàgines web -->
-    {% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django</title>
+</head>
 
-    {% endblock %}
-</div>
+<body>
+    {% include "header/header.html" %}
+    <a href="{% url 'user_form' %}">Afegir Usuaris</a>
+    <div style="margin: 15px 30px">
+        <h1>Primer Projecte</h1>
+        <p>Benvinguts a la primera app</p>
+
+        <!-- En aquest block s'hi renderitzaran tots les altres pàgines web -->
+        {% block content %}
+
+        {% endblock %}
+    </div>
+</body>
+
+</html>
