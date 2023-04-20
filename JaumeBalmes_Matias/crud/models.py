@@ -7,5 +7,5 @@ class Person(models.Model):
     cognom = models.CharField(max_length=30)
     email = models.CharField(max_length=30)
     age = models.CharField(max_length=2)
-    Equipo = models.CharField(max_length=30)
-    Seleccion = models.CharField(max_length=30)
+    equipo = models.CharField(max_length=30)
+    seleccion = models.CharField(max_length=30)

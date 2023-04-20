@@ -1,9 +1,9 @@
 {% extends 'index.html' %}
     {% block content %}
-    <h2 style="margin-top: 10px;">Benvinguts a la pàgina Students</h2>
+    <h2 style="margin-top: 10px;">Es mostrara informacio dels usuaris de DAW2</h2>
     <p>Dades Alumnes:</p>
     <ul>
-        {% for alumn in alumns %}
+        {% for usr in usrs %}
         <div style="border: solid black 2px; margin: 10px 0;padding: 5px; width: 15%;">
             <li style="list-style: none;">Nom: {{alumn.name}}</li>
             <li style="list-style: none;">Cognom: {{alumn.surname}}</li>
