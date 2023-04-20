@@ -103,6 +103,19 @@ def user_update(request, pk):
     context = {'form':form}
     return render(request, 'form.html', context)
 
+#Delete
+def user_delete(request, pk):
+    person = Person.objectes.get(id = pk)
+
+    if request.method == 'POST':
+        person.delete()
+        return redirect('index_one')
+        
+    context = {'object':person}
+    return render(request, 'delete_object.html', context)
+
+
+
 
 
 
